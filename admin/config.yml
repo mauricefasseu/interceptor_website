@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main # Der Branch, den du verwenden möchtest
+
+media_folder: "images/uploads" # Speicherort für Medien
+public_folder: "/images/uploads"
+
+collections:
+  - name: "band"
+    label: "Bandmitglieder"
+    folder: "content/band"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Rolle", name: "role", widget: "string" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Biografie", name: "bio", widget: "markdown" }
